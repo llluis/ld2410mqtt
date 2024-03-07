@@ -24,3 +24,10 @@ Then run the install script:
 ``` sh
 script/setup
 ```
+
+## Running
+Run script:
+
+``` sh
+script/run
+```
