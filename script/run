@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import signal
 import sys
 import subprocess
 import venv
@@ -8,5 +9,7 @@ _DIR = Path(__file__).parent
 _PROGRAM_DIR = _DIR.parent
 _VENV_DIR = _PROGRAM_DIR / ".venv"
 
+signal.signal(signal.SIGINT, signal.SIG_IGN)
+signal.signal(signal.SIGTERM, signal.SIG_IGN)
 context = venv.EnvBuilder().ensure_directories(_VENV_DIR)
 subprocess.check_call([context.env_exe, "-m", "ld2410mqtt"] + sys.argv[1:])
