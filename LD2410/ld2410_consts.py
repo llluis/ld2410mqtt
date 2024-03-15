@@ -35,35 +35,16 @@ PARAM_STATIC_GATE_WORD = "0200"
 PARAM_SELECT_ALL_GATE = "FFFF"
 
 # Set Baud Rate
-PARAM_BAUD_9600 = "0100"
-PARAM_BAUD_19200 = "0200"
-PARAM_BAUD_38400 = "0300"
-PARAM_BAUD_57600 = "0400"
-PARAM_BAUD_115200 = "0500"
-PARAM_BAUD_230400 = "0600"
-PARAM_BAUD_256000 = "0700"
-PARAM_BAUD_460800 = "0800"
+PARAM_ACCEPTABLE_BAUDS = [9600  ,
+                          19200 ,
+                          38400 ,
+                          57600 ,
+                          115200,
+                          230400,
+                          256000,
+                          460800]
 
-PARAM_ACCEPTABLE_BAUDS = [PARAM_BAUD_9600  ,
-                          PARAM_BAUD_19200 ,
-                          PARAM_BAUD_38400 ,
-                          PARAM_BAUD_57600 ,
-                          PARAM_BAUD_115200,
-                          PARAM_BAUD_230400,
-                          PARAM_BAUD_256000,
-                          PARAM_BAUD_460800]
-
-PARAM_DEFAULT_BAUD = PARAM_BAUD_256000
-
-# I know, it's very hacky lol
-BAUD_LOOKUP = {PARAM_BAUD_9600  : 9600,
-             PARAM_BAUD_19200 : 19200,
-             PARAM_BAUD_38400 : 38400,
-             PARAM_BAUD_57600 : 57600,
-             PARAM_BAUD_115200: 115200,
-             PARAM_BAUD_230400: 230400,
-             PARAM_BAUD_256000: 256000,
-             PARAM_BAUD_460800: 460800}
+PARAM_DEFAULT_BAUD = 256000
 
 # Ack Constants
 ACK_CONFIG_ENABLE = "0800FF01000001004000"
