@@ -1,0 +1,10 @@
+# Global configuration
+mqtt_discovery_root_topic: homeassistant
+mqtt_data_root_topic: ld2410mqtt
+mqtt_host: "192.168.1.1"
+mqtt_port: 1883
+mqtt_username: "username"
+mqtt_password: "password"
+mqtt_transport: "tcp"
+mqtt_ssl_enabled: False
+mqtt_websocket_path: ""
